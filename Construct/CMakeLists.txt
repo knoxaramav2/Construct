@@ -10,6 +10,8 @@ if (POLICY CMP0141)
 endif()
 
 project ("Construct")
+project ("Tests")
 
 # Include sub-projects.
 add_subdirectory ("Construct")
+add_subdirectory ("Tests")

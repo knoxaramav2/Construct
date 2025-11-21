@@ -3,7 +3,7 @@
 #
 
 # Add source to this project's executable.
-add_executable (Construct "Construct.cpp" "headers/Construct.h")
+add_executable (Construct "Construct.cpp" "headers/Construct.h" "headers/CliParser.h" "CliParser.cpp" "headers/Error.h" "Error.cpp" "headers/DocTree.h" "headers/Script.h" "headers/Invoker.h" "headers/Exec.h")
 target_include_directories(Construct PRIVATE "headers")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)

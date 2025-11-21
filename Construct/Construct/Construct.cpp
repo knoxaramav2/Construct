@@ -2,11 +2,21 @@
 //
 
 #include "Construct.h"
+#include "CliParser.h"
+#include "Error.h"
 
 using namespace std;
 
-int main()
+static void init(){
+	ErrHandle::init();
+}
+
+int main(int argc, char** argv)
 {
-	cout << "Hello CMake." << endl;
+	init();
+
+	CliOptions options = parseCliOptions(argc, argv);
+
+	
 	return 0;
 }
