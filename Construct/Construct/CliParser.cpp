@@ -14,7 +14,7 @@ void printHelp(){
 // Primary Methods
 
 void parseDOption(char* arg, CliOptions& options) {
-
+	std::string s_arg(arg);
 }
 
 void parseSOption(char arg, CliOptions& options){
@@ -52,4 +52,9 @@ CliOptions parseCliOptions(int argc, char ** argv)
 	}
 
 	return options;
+}
+
+CliOptions::CliOptions()
+{
+
 }

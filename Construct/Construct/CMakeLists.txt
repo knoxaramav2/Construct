@@ -3,12 +3,15 @@
 #
 
 # Add source to this project's executable.
-add_executable (Construct "Construct.cpp" "headers/Construct.h" "headers/CliParser.h" "CliParser.cpp" "headers/Error.h" "Error.cpp" "headers/DocTree.h" "headers/Script.h" "headers/Invoker.h" "headers/Exec.h")
+add_executable (Construct)
 target_include_directories(Construct PRIVATE "headers")
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET Construct PROPERTY CXX_STANDARD 20)
-endif()
+target_sources( Construct
+PUBLIC
+"Construct.cpp" 
+"CliParser.cpp" 
+"Error.cpp" 
+)
 
 # TODO: Add tests and install targets if needed.
 
