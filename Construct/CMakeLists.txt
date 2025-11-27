@@ -20,11 +20,12 @@ endif()
 set(CONSTRUCT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Construct)
 set(TESTS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Tests)
 set(UTILS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Utils)
+set(LANG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Lang)
 
 # Include projects.
 add_subdirectory (utils)
+add_subdirectory (lang)
 add_subdirectory (construct)
-
 
 #Testing
 enable_testing()

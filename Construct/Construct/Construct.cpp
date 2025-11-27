@@ -4,6 +4,8 @@
 #include "Construct.h"
 #include "CliParser.h"
 #include "Error.h"
+#include "ConstLang.h"
+
 #include <stdio.h>
 
 using namespace std;
@@ -15,9 +17,6 @@ static void init(){
 int main(int argc, char** argv)
 {
 	init();
-
-	printf("TEST");
-
 	CliOptions options = parseCliOptions(argc, argv);
 
 	

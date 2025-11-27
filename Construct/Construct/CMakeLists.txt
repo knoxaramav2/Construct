@@ -8,12 +8,14 @@ target_include_directories(
 PRIVATE 
 	"headers"
 	"${UTILS_DIR}/headers"
+	"${LANG_DIR}/headers"
 )
 
 target_link_libraries(
 	const_construct 
 PRIVATE 
 	const_utils
+	const_lang
 )
 
 target_sources( const_construct
