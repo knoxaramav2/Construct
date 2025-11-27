@@ -1,18 +1,25 @@
-﻿# CMakeList.txt : CMake project for Construct, include source and define
-# project specific logic here.
-#
+﻿
+message(">> Construct @ ${CMAKE_CURRENT_SOURCE_DIR}")
 
-# Add source to this project's executable.
-add_executable (Construct)
-target_include_directories(Construct PRIVATE "headers")
+add_executable (const_construct)
 
-target_sources( Construct
-PUBLIC
-"Construct.cpp" 
-"CliParser.cpp" 
-"Error.cpp" 
+target_include_directories(
+	const_construct 
+PRIVATE 
+	"headers"
+	"${UTILS_DIR}/headers"
 )
 
-# TODO: Add tests and install targets if needed.
+target_link_libraries(
+	const_construct 
+PRIVATE 
+	const_utils
+)
+
+target_sources( const_construct
+PUBLIC
+Construct.cpp
+CliParser.cpp
+)
 
 
