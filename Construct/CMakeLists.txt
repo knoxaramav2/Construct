@@ -17,12 +17,14 @@ if (POLICY CMP0141)
 endif()
 
 # Define project variables
+set(ENVIRONMENT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/Environment")
 set(CONSTRUCT_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Construct)
 set(TESTS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Tests)
 set(UTILS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Utils)
 set(LANG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Lang)
 
 # Include projects.
+add_subdirectory ("environment")
 add_subdirectory (utils)
 add_subdirectory (lang)
 add_subdirectory (construct)

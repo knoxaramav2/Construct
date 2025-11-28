@@ -1,0 +1,23 @@
+message(">> ENVIRONMENT @ ${CMAKE_CURRENT_SOURCE_DIR}")
+
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    set(_LINUX "" PARENT_SCOPE)
+    set(_DESKTOP "" PARENT_SCOPE)
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    set(_WINDOWS "" PARENT_SCOPE)
+    set(_DESKTOP "" PARENT_SCOPE)
+else()
+    message( FATAL_ERROR "Unsupported platform: ${CMAKE_SYSTEM_NAME}")
+endif()
+
+set(BUILD_CONFIG ${CMAKE_BUILD_TYPE})
+if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+set(DEBUG_MODE "" PARENT_SCOPE)
+endif()
+configure_file("environment.h.in" "headers/environment.h")
+
+if(DEFINED OPT_PERF)
+    set(OINLINE inline)
+else()
+    set(ONLINE TEST)
+endif()

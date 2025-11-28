@@ -8,6 +8,7 @@ target_include_directories(
 PUBLIC 
 ${UTILS_DIR}
 ${UTILS_DIR}/headers
+${ENVIRONMENT_DIR}/headers
 )
 
 target_sources( 
@@ -15,4 +16,5 @@ target_sources(
 PUBLIC
 	${UTILS_DIR}/Error.cpp
 	${UTILS_DIR}/StrUtils.cpp
+	${UTILS_DIR}/File.cpp
 )

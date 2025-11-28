@@ -9,12 +9,13 @@ target_include_directories(
 PUBLIC 
 ${LANG_DIR}
 ${LANG_DIR}/headers
+${UTILS_DIR}/headers
 )
 
 target_sources( 
 	const_lang
 PUBLIC
 	"ConstLang.cpp"
- "headers/Token.h")
+)
 
 
